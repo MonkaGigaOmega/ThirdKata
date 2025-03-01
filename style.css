@@ -1,0 +1,210 @@
+/* Нормализация стилей */
+body {
+    margin:0;
+}
+/*Нормализация стилей */
+
+
+@font-face {
+    font-family:'TT Lakes';
+    src: url('./fonts/TTLakes-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: bold;
+}
+@font-face {
+    font-family:'TT Lakes';
+    src: url('./fonts/TTLakes-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family:'TT Lakes';
+    src: url('./fonts/TTLakes-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: medium;
+}
+
+
+
+.repair-list__header{
+    min-width: 320px;
+    max-width: 767px;
+    height:80px;
+    margin-bottom: 16px;
+    background-color: #FFFFFF;
+    font-style:normal;
+    font-family: 'TT Lakes';
+    margin-top:0;
+    border-top:#D9FFF5 solid 1px;
+}
+.repair-list__title{
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-size:16px;
+    padding:16px;
+text-transform: uppercase;
+color:#7E7E82;
+margin-top:0;
+}
+.repair-list{
+    min-width: 320px;
+height:234px;
+    max-width: 767px;
+    position: relative;
+    background-color: #F9F9F9;
+}
+.swiper-slide{
+    height:72px;
+    background-color: #FFFFFF;
+    border:solid 1px #EAEAEA ;
+    border-radius: 6px;
+    box-sizing: border-box;
+    display:flex;
+    justify-content: space-between;
+}
+.repair-slider__logo {
+margin:auto 0px auto 16px;
+}
+.repair-slider .swiper-pagination{
+top:195px;
+min-width: 320px;
+max-width: 767px;
+height:20px;
+}
+.repair-slider .swiper-pagination-bullet{
+    width:12px;
+    height:12px;
+    line-height: 12px;
+    font-size: 14px;
+background-color: #B5B6BC;  
+}
+.repair-slider{
+    padding:0 16px;
+    overflow: hidden;
+}
+.repair-list__button-wrapper{
+    justify-content: space-between;
+    width:134px;
+    height: 24px;
+    position: absolute;
+    left:16px;
+    top:256px;
+    display:none;
+}
+.repair-slider__slide::after{
+    content:"";
+    margin:16px;
+    width:40px;
+    height:40px;
+    background-image: url(./icons/go.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+}
+.repair-list__button{
+    color:#1B1C21;
+    font-weight: medium;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    border: none;
+    width:120px;
+    margin-left:8px;
+    background-color:#F9F9F9;
+    padding:0;
+}
+.repair-list__button:hover{
+    background-color: #B5B6BC;
+}
+@media (min-width:768px){
+.repair-slider__wrapper{
+    display:flex;
+    flex-wrap: wrap;
+    gap:16px 24px;
+    overflow: hidden;
+    max-height:266px;
+}
+.repair-list__header{
+    min-width: 767px;
+    height:56px;
+    max-width: 1120px;
+    padding-left: 24px;
+    
+}
+.repair-list{
+    overflow: hidden;
+    min-height:322px;
+    min-width: 768px;
+  max-width: 1119px;
+}
+.repair-list__button-wrapper{
+display:flex ;
+margin-left:24px;
+}
+.repair-list__button-wrapper::after{
+    content: "";
+    position: relative;
+    left:-130px;
+    width:24px;
+    height:24px;
+background: url(./icons/str.svg) no-repeat center;
+    z-index: 100;
+}
+.repair-list__button-wrapper--flipped::after {
+    transform: rotate(180deg);
+  }
+.repair-slider{
+    padding:0 24px;
+}
+.swiper-slide{
+    width: calc(33.33% - 16px);
+    min-width:224px;
+    height:72px;
+    background-color: #FFFFFF;
+    border:solid 1px #EAEAEA ;
+    border-radius: 6px;
+    box-sizing: border-box;
+    display:flex;
+    justify-content: space-between;
+}
+.swiper-slide-hidden{
+    display: none;
+   }
+.swiper-slide-show{
+    display: flex;
+}
+.repair-list__button-wrapper--down {
+    top: 340px;
+  }
+}
+@media (min-width:1119px){
+    .repair-list__header{
+        min-width: 1119px;
+        max-width:1120px;
+        padding-left: 32px;
+        
+    } 
+    .repair-list{
+        overflow: hidden;
+        min-height:322px;
+        min-width: 1119px;
+        max-width:1120px;
+    }
+    .swiper-slide{
+        width: calc(25% - 24px);
+        height:72px;
+    }
+    .repair-slider__wrapper{
+        gap:16px 32px;
+        overflow: hidden;
+    }
+    .repair-list__button-wrapper{
+        margin-left:32px;
+        }
+.swiper-slide-hidden:nth-child(7),.swiper-slide-hidden:nth-child(8){
+    display: flex;
+}
+.repair-list{
+    margin:auto;
+}
+}
