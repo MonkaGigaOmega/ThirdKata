@@ -47,31 +47,26 @@ window.addEventListener('resize', () => {
   initSwiper();
 });
 
-let slides = document.querySelectorAll('.repair-slider__slide'); 
-let buttonShow = document.querySelector('.repair-list__button'); 
-let buttonShowWrapper = document.querySelector('.repair-list__button-wrapper'); 
+const slides = document.querySelectorAll('.repair-slider__slide');
+const buttonShow = document.querySelector('.repair-list__button');
+const buttonShowWrapper = document.querySelector('.repair-list__button-wrapper');
+const repairList = document.querySelector('.repair-list');
 
-buttonShow.onclick = function () {
+buttonShow.addEventListener('click', function () {
   for (let i = 6; i < slides.length; i++) {
     slides[i].classList.toggle('swiper-slide-hidden');
     slides[i].classList.toggle('swiper-slide-show');
   }
+  buttonShow.classList.toggle('button--active');
 
+  if (buttonShow.classList.contains('button--active')) {
+    buttonShow.textContent = 'Скрыть';
+  } else {
+    buttonShow.textContent = 'Показать все';
+  }
   buttonShowWrapper.classList.toggle('repair-list__button-wrapper--down');
 
-  if (buttonShow.textContent === 'Скрыть') {
-    buttonShow.textContent = 'Показать все';
-  } else {
-    buttonShow.textContent = 'Скрыть';
-  }
-};
+ repairList.classList.toggle('repair-list--expanded');
 
-buttonShow.addEventListener('click', function() {
-  var repairList = document.querySelector('.repair-list');
   buttonShowWrapper.classList.toggle('repair-list__button-wrapper--flipped');
-  if (repairList.style.height === '400px') {
-      repairList.style.height = '322px'; 
-  } else {
-      repairList.style.height = '400px';
-  }
 });

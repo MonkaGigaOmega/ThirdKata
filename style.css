@@ -116,6 +116,9 @@ background-color: #B5B6BC;
 .repair-list__button:hover{
     background-color: #B5B6BC;
 }
+.repair-list--expanded {
+    height: 400px;
+  }
 @media (min-width:768px){
 .repair-slider__wrapper{
     display:flex;
